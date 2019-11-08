@@ -67,7 +67,7 @@ class StatsModelsInference(Inference):
     This class can be used for inference by the LinearDMLCateEstimator.
 
     Any estimator that supports this method of inference must implement a `statsmodels`
-    property that returns a `StatsModelsLinearRegression` instance and a `featurizer` property that returns an
+    property that returns a :class:`.StatsModelsLinearRegression` instance and a `featurizer` property that returns an
     preprocessing featurizer for the X variable.
 
     Parameters

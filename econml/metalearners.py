@@ -51,9 +51,9 @@ class TLearner(BaseCateEstimator):
         X : array-like, shape (n, d_x)
             Feature vector that captures heterogeneity.
 
-        inference: string, `Inference` instance, or None
+        inference: string, :class:`.Inference` instance, or None
             Method for performing inference.  This estimator supports 'bootstrap'
-            (or an instance of `BootstrapInference`)
+            (or an instance of :class:`.BootstrapInference`)
 
         Returns
         -------
@@ -135,9 +135,9 @@ class SLearner(BaseCateEstimator):
         X : array-like, shape (n, d_x)
             Feature vector that captures heterogeneity.
 
-        inference: string, `Inference` instance, or None
+        inference: string, :class:`.Inference` instance, or None
             Method for performing inference.  This estimator supports 'bootstrap'
-            (or an instance of `BootstrapInference`)
+            (or an instance of :class:`.BootstrapInference`)
 
         Returns
         -------
@@ -255,9 +255,9 @@ class XLearner(BaseCateEstimator):
         X : array-like, shape (n, d_x)
             Feature vector that captures heterogeneity.
 
-        inference: string, `Inference` instance, or None
+        inference: string, :class:`.Inference` instance, or None
             Method for performing inference.  This estimator supports 'bootstrap'
-            (or an instance of `BootstrapInference`)
+            (or an instance of :class:`.BootstrapInference`)
 
         Returns
         -------
@@ -374,9 +374,9 @@ class DomainAdaptationLearner(BaseCateEstimator):
         X : array-like, shape (n, d_x)
             Feature vector that captures heterogeneity.
 
-        inference: string, `Inference` instance, or None
+        inference: string, :class:`.Inference` instance, or None
             Method for performing inference.  This estimator supports 'bootstrap'
-            (or an instance of `BootstrapInference`)
+            (or an instance of :class:`.BootstrapInference`)
 
         Returns
         -------
@@ -507,9 +507,9 @@ class DoublyRobustLearner(BaseCateEstimator):
         W : array-like, shape (n, d_w) or None (default=None)
             Controls (possibly high-dimensional).
 
-        inference: string, `Inference` instance, or None
+        inference: string, :class:`.Inference` instance, or None
             Method for performing inference.  This estimator supports 'bootstrap'
-            (or an instance of `BootstrapInference`)
+            (or an instance of :class:`.BootstrapInference`)
 
         Returns
         -------

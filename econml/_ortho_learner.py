@@ -265,7 +265,7 @@ class _OrthoLearner(TreatmentExpansionMixin, LinearCateEstimator):
         If int, random_state is the seed used by the random number generator;
         If :class:`~numpy.random.mtrand.RandomState` instance, random_state is the random number generator;
         If None, the random number generator is the :class:`~numpy.random.mtrand.RandomState` instance used
-        by `np.random`.
+        by :mod:`np.random<numpy.random>`.
 
     Examples
     --------
@@ -449,9 +449,9 @@ class _OrthoLearner(TreatmentExpansionMixin, LinearCateEstimator):
             Weights for each samples
         sample_var: optional (n,) vector or None (Default=None)
             Sample variance for each sample
-        inference: string, `Inference` instance, or None
+        inference: string, :class:`.Inference` instance, or None
             Method for performing inference.  This estimator supports 'bootstrap'
-            (or an instance of `BootstrapInference`).
+            (or an instance of :class:`.BootstrapInference`).
 
         Returns
         -------
@@ -537,7 +537,7 @@ class _OrthoLearner(TreatmentExpansionMixin, LinearCateEstimator):
         Then calls the score function of the model_final and returns the calculated score.
         The model_final model must have a score method.
 
-        If model_final does not have a score method, then it raises an `AttributeError`
+        If model_final does not have a score method, then it raises an :exc:`.AttributeError`
 
         Parameters
         ----------

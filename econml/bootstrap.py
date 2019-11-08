@@ -7,7 +7,7 @@ from joblib import Parallel, delayed
 from sklearn.base import clone
 
 
-class BootstrapEstimator(object):
+class BootstrapEstimator:
     """Estimator that uses bootstrap sampling to wrap an existing estimator.
 
     This estimator provides a `fit` method with the same signature as the wrapped estimator.

@@ -11,10 +11,10 @@ effect heterogeneity.
 
 This file consists of classes that implement the following variants of the ORF method:
 
-- The `ContinuousTreatmentOrthoForest`, a two-forest approach for learning continuous treatment effects
+- The :class:`ContinuousTreatmentOrthoForest`, a two-forest approach for learning continuous treatment effects
   using kernel two stage estimation.
 
-- The `DiscreteTreatmentOrthoForest`, a two-forest approach for learning discrete treatment effects
+- The :class:`DiscreteTreatmentOrthoForest`, a two-forest approach for learning discrete treatment effects
   using kernel two stage estimation.
 
 For more details on these methods, see our paper [Oprescu2019]_.
@@ -122,7 +122,7 @@ def _group_cross_fit(model_instance, X, y, t, split_indices, sample_weight=None,
 
 
 class BaseOrthoForest(TreatmentExpansionMixin, LinearCateEstimator):
-    """Base class for the `ContinuousTreatmentOrthoForest` and `DiscreteTreatmentOrthoForest`."""
+    """Base class for the :class:`ContinuousTreatmentOrthoForest` and :class:`DiscreteTreatmentOrthoForest`."""
 
     def __init__(self,
                  nuisance_estimator,
@@ -177,9 +177,9 @@ class BaseOrthoForest(TreatmentExpansionMixin, LinearCateEstimator):
         W : array-like, shape (n, d_w) or None (default=None)
             High-dimensional controls.
 
-        inference: string, `Inference` instance, or None
+        inference: string, :class:`.Inference` instance, or None
             Method for performing inference.  This estimator supports 'bootstrap'
-            (or an instance of `BootstrapInference`)
+            (or an instance of :class:`.BootstrapInference`)
 
         Returns
         -------
@@ -363,15 +363,15 @@ class ContinuousTreatmentOrthoForest(BaseOrthoForest):
         value of `model_Y` parameter.
 
     n_jobs : int, optional (default=-1)
-        The number of jobs to run in parallel for both `fit` and `predict`.
-        ``-1`` means using all processors. Since `OrthoForest` methods are
+        The number of jobs to run in parallel for both :meth:`fit` and :meth:`effect`.
+        ``-1`` means using all processors. Since OrthoForest methods are
         computationally heavy, it is recommended to set `n_jobs` to -1.
 
-    random_state : int, RandomState instance or None, optional (default=None)
+    random_state : int, :class:`~numpy.random.mtrand.RandomState` instance or None, optional (default=None)
         If int, random_state is the seed used by the random number generator;
-        If RandomState instance, random_state is the random number generator;
-        If None, the random number generator is the RandomState instance used
-        by `np.random`.
+        If :class:`~numpy.random.mtrand.RandomState` instance, random_state is the random number generator;
+        If None, the random number generator is the :class:`~numpy.random.mtrand.RandomState` instance used
+        by :mod:`np.random<numpy.random>`.
 
     """
 
@@ -588,15 +588,15 @@ class DiscreteTreatmentOrthoForest(BaseOrthoForest):
         If parameter is set to `None`, it defaults to the value of `model_Y` parameter.
 
     n_jobs : int, optional (default=-1)
-        The number of jobs to run in parallel for both `fit` and `predict`.
-        ``-1`` means using all processors. Since `OrthoForest` methods are
+        The number of jobs to run in parallel for both :meth:`fit` and :meth:`effect`.
+        ``-1`` means using all processors. Since OrthoForest methods are
         computationally heavy, it is recommended to set `n_jobs` to -1.
 
-    random_state : int, RandomState instance or None, optional (default=None)
+    random_state : int, :class:`~numpy.random.mtrand.RandomState` instance or None, optional (default=None)
         If int, random_state is the seed used by the random number generator;
-        If RandomState instance, random_state is the random number generator;
-        If None, the random number generator is the RandomState instance used
-        by `np.random`.
+        If :class:`~numpy.random.mtrand.RandomState` instance, random_state is the random number generator;
+        If None, the random number generator is the :class:`~numpy.random.mtrand.RandomState` instance used
+        by :mod:`np.random<numpy.random>`.
 
 
     """
@@ -669,9 +669,9 @@ class DiscreteTreatmentOrthoForest(BaseOrthoForest):
         W : array-like, shape (n, d_w) or None (default=None)
             High-dimensional controls.
 
-        inference: string, `Inference` instance, or None
+        inference: string, :class:`.Inference` instance, or None
             Method for performing inference.  This estimator supports 'bootstrap'
-            (or an instance of `BootstrapInference`)
+            (or an instance of :class:`.BootstrapInference`)
 
         Returns
         -------

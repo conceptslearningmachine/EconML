@@ -626,7 +626,7 @@ def einsum_sparse(subscripts, *arrs):
                   [arrs[indMap[c][0][0]].shape[indMap[c][0][1]] for c in outputs])
 
 
-class WeightedModelWrapper(object):
+class WeightedModelWrapper:
     """Helper class for assiging weights to models without this option.
 
     Parameters
@@ -882,12 +882,12 @@ class WeightedLasso(Lasso):
     positive : bool, optional
         When set to ``True``, forces the coefficients to be positive.
 
-    random_state : int, RandomState instance or None, optional, default None
+    random_state : int, :class:`~numpy.random.mtrand.RandomState` instance or None, optional, default None
         The seed of the pseudo random number generator that selects a random
         feature to update.  If int, random_state is the seed used by the random
-        number generator; If RandomState instance, random_state is the random
+        number generator; If :class:`~numpy.random.mtrand.RandomState` instance, random_state is the random
         number generator; If None, the random number generator is the
-        RandomState instance used by `np.random`. Used when ``selection`` ==
+        :class:`~numpy.random.mtrand.RandomState` instance used by :mod:`np.random<numpy.random>`. Used when ``selection`` ==
         'random'.
 
     selection : str, default 'cyclic'
@@ -980,12 +980,12 @@ class WeightedMultiTaskLasso(MultiTaskLasso):
         initialization, otherwise, just erase the previous solution.
         See :term:`the Glossary <warm_start>`.
 
-    random_state : int, RandomState instance or None, optional, default None
+    random_state : int, :class:`~numpy.random.mtrand.RandomState` instance or None, optional, default None
         The seed of the pseudo random number generator that selects a random
         feature to update.  If int, random_state is the seed used by the random
-        number generator; If RandomState instance, random_state is the random
+        number generator; If :class:`~numpy.random.mtrand.RandomState` instance, random_state is the random
         number generator; If None, the random number generator is the
-        RandomState instance used by `np.random`. Used when ``selection`` ==
+        :class:`~numpy.random.mtrand.RandomState` instance used by :mod:`np.random<numpy.random>`. Used when ``selection`` ==
         'random'.
 
     selection : str, default 'cyclic'
@@ -1034,7 +1034,7 @@ class WeightedMultiTaskLasso(MultiTaskLasso):
         return self
 
 
-class WeightedKFold(object):
+class WeightedKFold:
     """K-Folds cross-validator for weighted data.
 
     Provides train/test indices to split data in train/test sets.
@@ -1056,11 +1056,11 @@ class WeightedKFold(object):
     shuffle : boolean, optional
         Whether to shuffle the data before splitting into batches.
 
-    random_state : int, RandomState instance or None, optional, default=None
+    random_state : int, :class:`~numpy.random.mtrand.RandomState` instance or None, optional, default=None
         If int, random_state is the seed used by the random number generator;
-        If RandomState instance, random_state is the random number generator;
-        If None, the random number generator is the RandomState instance used
-        by `np.random`. Used when ``shuffle`` == True.
+        If :class:`~numpy.random.mtrand.RandomState` instance, random_state is the random number generator;
+        If None, the random number generator is the :class:`~numpy.random.mtrand.RandomState` instance used
+        by :mod:`np.random<numpy.random>`. Used when ``shuffle`` == True.
     """
 
     def __init__(self, n_splits=3, n_trials=10, shuffle=False, random_state=None):
@@ -1138,11 +1138,11 @@ class WeightedStratifiedKFold(WeightedKFold):
     shuffle : boolean, optional
         Whether to shuffle the data before splitting into batches.
 
-    random_state : int, RandomState instance or None, optional, default=None
+    random_state : int, :class:`~numpy.random.mtrand.RandomState` instance or None, optional, default=None
         If int, random_state is the seed used by the random number generator;
-        If RandomState instance, random_state is the random number generator;
-        If None, the random number generator is the RandomState instance used
-        by `np.random`. Used when ``shuffle`` == True.
+        If :class:`~numpy.random.mtrand.RandomState` instance, random_state is the random number generator;
+        If None, the random number generator is the :class:`~numpy.random.mtrand.RandomState` instance used
+        by :mod:`np.random<numpy.random>`. Used when ``shuffle`` == True.
     """
 
     def split(self, X, y, sample_weight=None):
@@ -1222,12 +1222,12 @@ class WeightedLassoCV(LassoCV):
     positive : bool, optional
         If positive, restrict regression coefficients to be positive
 
-    random_state : int, RandomState instance or None, optional, default None
+    random_state : int, :class:`~numpy.random.mtrand.RandomState` instance or None, optional, default None
         The seed of the pseudo random number generator that selects a random
         feature to update.  If int, random_state is the seed used by the random
-        number generator; If RandomState instance, random_state is the random
+        number generator; If :class:`~numpy.random.mtrand.RandomState` instance, random_state is the random
         number generator; If None, the random number generator is the
-        RandomState instance used by `np.random`. Used when ``selection`` ==
+        :class:`~numpy.random.mtrand.RandomState` instance used by :mod:`np.random<numpy.random>`. Used when ``selection`` ==
         'random'.
 
     selection : str, default 'cyclic'
@@ -1325,12 +1325,12 @@ class WeightedMultiTaskLassoCV(MultiTaskLassoCV):
         ``-1`` means using all processors. See :term:`Glossary <n_jobs>`
         for more details.
 
-    random_state : int, RandomState instance or None, optional, default None
+    random_state : int, :class:`~numpy.random.mtrand.RandomState` instance or None, optional, default None
         The seed of the pseudo random number generator that selects a random
         feature to update.  If int, random_state is the seed used by the random
-        number generator; If RandomState instance, random_state is the random
+        number generator; If :class:`~numpy.random.mtrand.RandomState` instance, random_state is the random
         number generator; If None, the random number generator is the
-        RandomState instance used by `np.random`. Used when ``selection`` ==
+        :class:`~numpy.random.mtrand.RandomState` instance used by :mod:`np.random<numpy.random>`. Used when ``selection`` ==
         'random'
 
     selection : str, default 'cyclic'
@@ -1376,7 +1376,7 @@ class WeightedMultiTaskLassoCV(MultiTaskLassoCV):
         return self
 
 
-class MultiModelWrapper(object):
+class MultiModelWrapper:
     """Helper class for assiging weights to models without this option.
 
     Parameters
